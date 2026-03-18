@@ -1,0 +1,5 @@
+import { Card } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { StatusChip } from "@/components/shared/StatusChip"; import { announcements } from "@/data/dummy-data"; import { Plus } from "lucide-react";
+export default function AnnouncementCenter() {
+  return (<div className="space-y-6"><div className="flex items-center justify-between"><h1 className="text-2xl font-bold">Announcements</h1><Button><Plus className="h-4 w-4 mr-2"/>New Announcement</Button></div>
+    <div className="space-y-4">{announcements.map(a=>(<Card key={a.id} className="p-6"><div className="flex items-start justify-between mb-2"><div><h3 className="font-semibold">{a.title}</h3><p className="text-xs text-muted-foreground">{a.date} • {a.audience}</p></div><StatusChip status={a.status}/></div><p className="text-sm text-muted-foreground">{a.content}</p><div className="flex gap-2 mt-4"><Button size="sm" variant="outline">Edit</Button><Button size="sm" variant="outline">Delete</Button></div></Card>))}</div></div>);
+}
