@@ -1,0 +1,6 @@
+import { Card } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { StatusChip } from "@/components/shared/StatusChip"; import { supportTickets } from "@/data/dummy-data";
+export default function SupportDisputes() {
+  return (<div className="space-y-6"><h1 className="text-2xl font-bold">Support & Disputes</h1>
+    <Card className="p-6"><div className="overflow-x-auto"><table className="w-full text-sm"><thead><tr className="border-b text-muted-foreground"><th className="text-left py-2 font-medium">Subject</th><th className="text-left py-2 font-medium">Reporter</th><th className="text-left py-2 font-medium">Role</th><th className="text-left py-2 font-medium">Priority</th><th className="text-left py-2 font-medium">Date</th><th className="text-left py-2 font-medium">Status</th><th className="text-left py-2 font-medium">Action</th></tr></thead>
+    <tbody>{supportTickets.map(t=>(<tr key={t.id} className="border-b last:border-0"><td className="py-3 font-medium">{t.subject}</td><td>{t.reporter}</td><td>{t.role}</td><td><StatusChip status={t.priority}/></td><td className="text-muted-foreground">{t.date}</td><td><StatusChip status={t.status}/></td><td><Button size="sm" variant="outline" className="text-xs">View</Button></td></tr>))}</tbody></table></div></Card></div>);
+}
