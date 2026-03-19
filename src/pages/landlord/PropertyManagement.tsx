@@ -16,7 +16,7 @@ export default function PropertyManagement() {
         {properties.filter(p => p.landlord === "Juan Dela Cruz").map((p) => (
           <Card key={p.id} className="p-6">
             <div className="flex items-start gap-4">
-              <div className="h-16 w-16 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-3xl shrink-0">{p.image}</div>
+              <PropertyIcon type={p.image} size="lg" />
               <div className="flex-1">
                 <div className="flex items-start justify-between">
                   <div><h3 className="font-semibold">{p.name}</h3><p className="text-xs text-muted-foreground">{p.location}</p></div>
