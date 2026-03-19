@@ -1,3 +1,13 @@
+import { Building2, Home, HardHat, TreePine } from "lucide-react";
+import { LucideIcon } from "lucide-react";
+
+export const propertyIcons: Record<string, LucideIcon> = {
+  "apartment": Building2,
+  "boarding": Home,
+  "construction": HardHat,
+  "nature": TreePine,
+};
+
 export const properties = [
   {
     id: "1",
@@ -7,7 +17,7 @@ export const properties = [
     rent: 6500,
     status: "Available",
     amenities: ["WiFi Ready", "Own CR", "Near Campus", "Laundry Nearby"],
-    image: "🏢",
+    image: "apartment",
     rating: 4.8,
     trustScore: 92,
     landlord: "Juan Dela Cruz",
@@ -23,7 +33,7 @@ export const properties = [
     rent: 4200,
     status: "2 Units Left",
     amenities: ["Shared Kitchen", "Water Included", "Security Gate"],
-    image: "🏠",
+    image: "boarding",
     rating: 4.5,
     trustScore: 87,
     landlord: "Maria Santos",
@@ -39,7 +49,7 @@ export const properties = [
     rent: 8900,
     status: "Available",
     amenities: ["Parking", "Balcony", "Internet Ready"],
-    image: "🏗️",
+    image: "construction",
     rating: 4.9,
     trustScore: 95,
     landlord: "Cedric Ramos Property Rentals",
@@ -55,7 +65,7 @@ export const properties = [
     rent: 3000,
     status: "Limited Slots",
     amenities: ["Furnished", "Utilities Shared", "Walking Distance to Market"],
-    image: "🌿",
+    image: "nature",
     rating: 4.3,
     trustScore: 82,
     landlord: "Juan Dela Cruz",
