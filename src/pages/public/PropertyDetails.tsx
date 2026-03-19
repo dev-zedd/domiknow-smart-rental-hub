@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { StatusChip } from "@/components/shared/StatusChip";
 import { MockMap } from "@/components/shared/MockMap";
+import { PropertyIcon } from "@/components/shared/PropertyIcon";
 import { MapPin, Star, Shield, User, ChevronLeft, Wifi, Droplets, Car, Home, CheckCircle2 } from "lucide-react";
 
 const amenityIcons: Record<string, any> = { "WiFi Ready": Wifi, "Internet Ready": Wifi, "Water Included": Droplets, "Parking": Car, "Furnished": Home };
@@ -22,8 +23,8 @@ export default function PropertyDetails() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           {/* Photo Gallery */}
-          <div className="h-64 md:h-80 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center text-7xl relative">
-            {property.image}
+          <div className="h-64 md:h-80 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center relative">
+            <PropertyIcon type={property.image} size="xl" className="!h-32 !w-32" />
             <div className="absolute top-4 right-4"><StatusChip status={property.status} /></div>
           </div>
 

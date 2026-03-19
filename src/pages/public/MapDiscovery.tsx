@@ -1,6 +1,7 @@
 import { MockMap } from "@/components/shared/MockMap";
 import { Card } from "@/components/ui/card";
 import { properties } from "@/data/dummy-data";
+import { PropertyIcon } from "@/components/shared/PropertyIcon";
 import { StatusChip } from "@/components/shared/StatusChip";
 import { MapPin, Star, SlidersHorizontal } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -26,7 +27,7 @@ export default function MapDiscovery() {
             <Link to={`/property/${p.id}`} key={p.id}>
               <Card className="p-3 hover:bg-muted/50 cursor-pointer transition-colors">
                 <div className="flex items-start gap-2">
-                  <span className="text-2xl">{p.image}</span>
+                  <PropertyIcon type={p.image} size="sm" />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium truncate">{p.name}</p>
                     <div className="flex items-center gap-1 text-xs text-muted-foreground">

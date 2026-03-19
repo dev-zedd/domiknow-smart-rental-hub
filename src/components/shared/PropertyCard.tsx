@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { StatusChip } from "./StatusChip";
+import { PropertyIcon } from "./PropertyIcon";
 import { MapPin, Star, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -23,8 +24,8 @@ export function PropertyCard({ id, name, location, type, rent, status, amenities
   return (
     <Link to={`/property/${id}`}>
       <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
-        <div className="h-40 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-5xl relative">
-          {image}
+        <div className="h-40 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center relative">
+          <PropertyIcon type={image} size="xl" />
           <div className="absolute top-2 right-2">
             <StatusChip status={status} />
           </div>
