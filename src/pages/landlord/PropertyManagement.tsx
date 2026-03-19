@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { PropertyIcon } from "@/components/shared/PropertyIcon";
 import { Button } from "@/components/ui/button";
 import { StatusChip } from "@/components/shared/StatusChip";
 import { properties } from "@/data/dummy-data";
